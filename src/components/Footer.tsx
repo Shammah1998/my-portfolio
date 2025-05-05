@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
               &copy; {currentYear} Victor Shammah. All rights reserved.
             </p>
             <p className="text-xs text-gray-500 mt-1 flex items-center justify-center md:justify-end">
-              Made with <Heart size={12} className="mx-1 text-accent" /> by Victor Shammah
+              Developer: Victor Shammah
             </p>
           </div>
         </div>

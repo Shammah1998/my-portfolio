@@ -2,7 +2,9 @@
 
 A premium, dark-themed personal portfolio website showcasing my skills, experience, and projects. Built with modern web technologies and featuring a luxurious design.
 
-![Portfolio Preview](portfolio-preview.png)
+<div align="center">
+  <img src="src/assets/images/portfolio-preview.png" alt="Portfolio Preview" width="100%" />
+</div>
 
 ## Table of Contents
 
