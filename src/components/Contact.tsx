@@ -14,20 +14,49 @@ const Contact: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus('sending');
     
-    // Simulate form submission
-    setTimeout(() => {
-      setFormStatus('success');
-      setFormData({ name: '', email: '', message: '' });
+    // Create FormData object
+    const apiFormData = new FormData();
+    
+    // Add form fields
+    apiFormData.append('name', formData.name);
+    apiFormData.append('email', formData.email);
+    apiFormData.append('message', formData.message);
+    
+    // Add access key from Web3Forms
+    apiFormData.append('access_key', '3e9ce5af-3fed-4362-bbec-cefdb829457e');
+    
+    // Customize email sender name and template
+    apiFormData.append('from_name', 'Portfolio');
+    apiFormData.append('subject', 'New Portfolio Contact Request');
+    
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: apiFormData
+      });
       
-      // Reset form status after 3 seconds
-      setTimeout(() => {
-        setFormStatus('idle');
-      }, 3000);
-    }, 1500);
+      const data = await response.json();
+      
+      if (data.success) {
+        setFormStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        
+        // Reset form status after 3 seconds
+        setTimeout(() => {
+          setFormStatus('idle');
+        }, 3000);
+      } else {
+        console.error('Form submission error:', data);
+        setFormStatus('error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setFormStatus('error');
+    }
   };
 
   return (
@@ -143,6 +172,9 @@ const Contact: React.FC = () => {
                   placeholder="Hello Victor, I'd like to discuss a project..."
                 ></textarea>
               </div>
+              
+              {/* Honeypot field to prevent spam */}
+              <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
               
               <button
                 type="submit"
