@@ -3,7 +3,13 @@
 A premium, dark-themed personal portfolio website showcasing my skills, experience, and projects. Built with modern web technologies and featuring a luxurious design.
 
 <div align="center">
-  <img src="src/assets/images/portfolio-preview.png" alt="Portfolio Preview" width="100%" />
+  <h3>Portfolio Preview</h3>
+  <img src="src/assets/images/Screenshot 2025-05-05 101626.png" alt="Hero Section" width="100%" style="margin-bottom: 10px; border-radius: 8px;" />
+  <img src="src/assets/images/Screenshot 2025-05-05 101640.png" alt="Skills Section" width="100%" style="margin-bottom: 10px; border-radius: 8px;" />
+  <img src="src/assets/images/Screenshot 2025-05-05 101655.png" alt="Experience Section" width="100%" style="margin-bottom: 10px; border-radius: 8px;" />
+  <img src="src/assets/images/Screenshot 2025-05-05 101703.png" alt="Projects Section" width="100%" style="margin-bottom: 10px; border-radius: 8px;" />
+  <img src="src/assets/images/Screenshot 2025-05-05 101724.png" alt="Certifications Section" width="100%" style="margin-bottom: 10px; border-radius: 8px;" />
+  <img src="src/assets/images/Screenshot 2025-05-05 102156.png" alt="Contact Section" width="100%" style="margin-bottom: 10px; border-radius: 8px;" />
 </div>
 
 ## Table of Contents
