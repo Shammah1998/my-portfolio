@@ -60,47 +60,47 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
+    <section id="contact" className="py-16 md:py-20 bg-gradient-to-br from-primary to-secondary text-white">
+      <div className="container mx-auto">
+        <div className="text-center mb-10 md:mb-16 px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-lg opacity-90 max-w-2xl mx-auto">
             Have a project in mind or want to discuss potential opportunities? Let's connect!
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-10">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-10 px-4 sm:px-6">
           <div className="w-full md:w-1/2">
             <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
             
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4">
-                  <Phone size={20} />
+                <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 shrink-0">
+                  <Phone size={18} />
                 </div>
                 <div>
                   <p className="font-medium">Phone</p>
-                  <a href="tel:+254725940547" className="opacity-80 hover:opacity-100 transition-opacity">
+                  <a href="tel:+254725940547" className="opacity-80 hover:opacity-100 transition-opacity text-sm md:text-base">
                     +254 725 940 547
                   </a>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4">
-                  <Mail size={20} />
+                <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 shrink-0">
+                  <Mail size={18} />
                 </div>
                 <div>
                   <p className="font-medium">Email</p>
-                  <a href="mailto:victorshammah50@gmail.com" className="opacity-80 hover:opacity-100 transition-opacity">
+                  <a href="mailto:victorshammah50@gmail.com" className="opacity-80 hover:opacity-100 transition-opacity text-sm md:text-base break-all">
                     victorshammah50@gmail.com
                   </a>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4">
-                  <Linkedin size={20} />
+                <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 shrink-0">
+                  <Linkedin size={18} />
                 </div>
                 <div>
                   <p className="font-medium">LinkedIn</p>
@@ -108,7 +108,7 @@ const Contact: React.FC = () => {
                     href="https://www.linkedin.com/in/victor-shammah-8949211b2" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="opacity-80 hover:opacity-100 transition-opacity"
+                    className="opacity-80 hover:opacity-100 transition-opacity text-sm md:text-base break-all"
                   >
                     victor-shammah-8949211b2
                   </a>
@@ -116,12 +116,12 @@ const Contact: React.FC = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4">
-                  <MapPin size={20} />
+                <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 shrink-0">
+                  <MapPin size={18} />
                 </div>
                 <div>
                   <p className="font-medium">Location</p>
-                  <p className="opacity-80">Nairobi, Kenya</p>
+                  <p className="opacity-80 text-sm md:text-base">Nairobi, Kenya</p>
                 </div>
               </div>
             </div>
@@ -140,7 +140,7 @@ const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30"
+                  className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 text-sm md:text-base"
                   placeholder="John Doe"
                 />
               </div>
@@ -154,7 +154,7 @@ const Contact: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30"
+                  className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 text-sm md:text-base"
                   placeholder="john@example.com"
                 />
               </div>
@@ -168,7 +168,7 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 resize-none"
+                  className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 resize-none text-sm md:text-base"
                   placeholder="Hello Victor, I'd like to discuss a project..."
                 ></textarea>
               </div>
@@ -179,11 +179,11 @@ const Contact: React.FC = () => {
               <button
                 type="submit"
                 disabled={formStatus === 'sending' || formStatus === 'success'}
-                className={`px-6 py-3 rounded-lg font-medium flex items-center justify-center transition-all duration-300 ${
+                className={`px-5 py-2.5 md:px-6 md:py-3 rounded-lg font-medium flex items-center justify-center transition-all duration-300 ${
                   formStatus === 'success' 
                     ? 'bg-green-500 hover:bg-green-600' 
                     : 'bg-accent hover:bg-accent/90'
-                } text-white w-full`}
+                } text-white w-full text-sm md:text-base`}
               >
                 {formStatus === 'sending' && (
                   <>
@@ -197,7 +197,7 @@ const Contact: React.FC = () => {
                 {formStatus === 'success' && <span>Message Sent!</span>}
                 {(formStatus === 'idle' || formStatus === 'error') && (
                   <>
-                    <Send size={18} className="mr-2" />
+                    <Send size={16} className="mr-2" />
                     <span>Send Message</span>
                   </>
                 )}

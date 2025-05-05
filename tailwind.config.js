@@ -3,6 +3,15 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      screens: {
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+        'laptop': {'min': '1024px', 'max': '1366px'}, // Common laptop screen sizes
+        'tablet': {'min': '768px', 'max': '1023px'}, // Tablet specific breakpoint
+      },
       colors: {
         primary: '#0F172A',
         secondary: '#1E293B',
@@ -21,12 +30,23 @@ export default {
         display: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
       },
       container: {
+        center: true,
         padding: {
           DEFAULT: '1rem',
           sm: '2rem',
-          lg: '4rem',
-          xl: '5rem',
+          md: '2.5rem',
+          lg: '3rem',
+          xl: '4rem',
           '2xl': '6rem',
+          'laptop': '2.5rem', // Specific padding for laptop screens
+          'tablet': '2rem',   // Specific padding for tablets
+        },
+        screens: {
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1280px',
+          '2xl': '1400px', // Limit max width for very large screens
         },
       },
       animation: {
@@ -63,6 +83,10 @@ export default {
       boxShadow: {
         'glow': '0 0 15px 5px rgba(99, 102, 241, 0.25)',
         'card': '0 10px 30px -5px rgba(2, 6, 23, 0.3)',
+      },
+      spacing: {
+        '18': '4.5rem',
+        '22': '5.5rem',
       },
     },
   },
