@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronRight } from 'lucide-react';
+import profilePic from '../assets/images/profile pic.jpeg';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,10 +61,13 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           <a 
             href="#home" 
-            className="font-display font-bold text-2xl md:text-3xl text-light group"
+            className="font-display font-bold text-2xl md:text-3xl text-light group flex items-center"
           >
-            <span className="inline-block transition-transform duration-300 group-hover:scale-110">VS</span>
-            <span className="text-accent inline-block transition-all duration-300 group-hover:text-white">.</span>
+            <img 
+              src={profilePic} 
+              alt="Victor Shammah" 
+              className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover transition-transform duration-300 group-hover:scale-110"
+            />
           </a>
 
           {/* Desktop Navigation */}
