@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Certifications from './components/Certifications';
+import Documents from './components/Documents';
+import DocumentDetail from './components/DocumentDetail';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-function App() {
+const Home = () => {
   useEffect(() => {
-    document.title = "Victor Shammah | Senior Software Engineer";
-    
     // Implement smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
@@ -40,16 +40,34 @@ function App() {
   }, []);
 
   return (
-    <div className="font-sans">
+    <>
       <Navbar />
       <Hero />
       <Skills />
       <Experience />
       <Projects />
-      <Certifications />
+      <Documents />
       <Contact />
       <Footer />
-    </div>
+    </>
+  );
+};
+
+function App() {
+  useEffect(() => {
+    document.title = "Victor Shammah | Senior Software Engineer";
+  }, []);
+
+  return (
+    <Router>
+      <div className="font-sans">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/document/:id" element={<DocumentDetail />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
