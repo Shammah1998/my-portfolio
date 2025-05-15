@@ -11,4 +11,6 @@ export default defineConfig({
   // Change 'portfolio' to your actual repository name
   // Leave empty if you're deploying to a custom domain
   base: '/my-portfolio/',
+  // Add support for markdown files
+  assetsInclude: ['**/*.md'],
 });

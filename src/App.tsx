@@ -7,6 +7,8 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Documents from './components/Documents';
 import DocumentDetail from './components/DocumentDetail';
+import ProjectDetail from './components/ProjectDetail';
+import ProjectsPage from './components/ProjectsPage';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -64,6 +66,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/document/:id" element={<DocumentDetail />} />
+          <Route path="/project/:id" element={<ProjectDetail />} />
+          <Route path="/projects" element={<ProjectsPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>
